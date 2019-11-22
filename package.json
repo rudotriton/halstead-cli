@@ -1,6 +1,6 @@
 {
-  "name": "halstead-cli",
-  "version": "1.0.0",
+  "name": "halstead-metrics-cli",
+  "version": "1.0.1",
   "description": "A cli app to calculate the halstead metrics",
   "keywords": [],
   "main": "index.js",

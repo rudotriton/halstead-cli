@@ -9,7 +9,7 @@ module.exports = async (args) => {
   const spinner = ora().start();
 
   try {
-    const sourceDir = args.src || args.s;
+    const sourceDir = args[0];
     
     const fullScript = await combineSrc(sourceDir);
     
@@ -19,7 +19,7 @@ module.exports = async (args) => {
     const metrics = countTokens(parsedCode.tokens);
     console.log(`${chalk.green(`\nHalstead metrics for: ${sourceDir}\n`)}`);
     printMetrics(metrics);
-
+    console.log('\n');
   } catch (err) {
     spinner.stop();
 

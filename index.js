@@ -16,8 +16,11 @@ module.exports = () => {
   }
   
   switch (cmd) {
-    case "print":
-      require("./cmds/halstead")(args);
+    case "dir":
+      require("./cmds/dir")(args._.slice(1));
+      break;
+    case "file":
+      require("./cmds/file")(args._.slice(1));
       break;
     case "version":
       require("./cmds/version")(args);
