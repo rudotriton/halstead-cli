@@ -19,5 +19,5 @@ halstead dir src/scripts
 Metrics for single or multiple files:
 
 ```bash
-halstead dir src/scripts/index.js src/scripts/file.js
+halstead file src/scripts/index.js src/scripts/file.js
 ```
