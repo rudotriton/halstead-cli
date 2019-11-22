@@ -1,0 +1,28 @@
+{
+  "name": "halstead-cli",
+  "version": "1.0.0",
+  "description": "A cli app to calculate the halstead metrics",
+  "keywords": [],
+  "main": "index.js",
+  "homepage": "https://github.com/rudotriton/halstead-cli.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudotriton/halstead-cli.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {},
+  "bin": {
+    "halstead": "bin/halstead"
+  },
+  "preferGlobal": true,
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "minimist": "^1.2.0",
+    "ora": "^4.0.3",
+    "recast": "^0.18.5"
+  }
+}
