@@ -22,7 +22,7 @@ module.exports = (metrics) => {
   const estimatedLength =
     distinctOperators * Math.log2(distinctOperators) +
     distinctOperands * Math.log2(distinctOperands);
-  console.log(sb('Esimated length', estimatedLength));
+  console.log(sb('Estimated length', estimatedLength));
 
   const purityRatio = estimatedLength / programLength;
   console.log(sb('Purity ratio', purityRatio));

@@ -1,6 +1,6 @@
 {
   "name": "halstead-metrics-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A cli app to calculate the halstead metrics",
   "keywords": [
     "halstead",
