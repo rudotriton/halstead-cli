@@ -2,7 +2,12 @@
   "name": "halstead-metrics-cli",
   "version": "1.0.1",
   "description": "A cli app to calculate the halstead metrics",
-  "keywords": [],
+  "keywords": [
+    "halstead",
+    "complexity",
+    "metrics",
+    "analyze"
+  ],
   "main": "index.js",
   "homepage": "https://github.com/rudotriton/halstead-cli.git",
   "repository": {
