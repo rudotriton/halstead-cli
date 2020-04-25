@@ -2,7 +2,11 @@ const chalk = require('chalk');
 
 const menus = {
   main: `
-    ${chalk.bold("halstead metrics cli\n")}
+    ${chalk.bold("halstead metrics cli\n\n")}
+    ${chalk.bold("options\n")}
+    ${chalk.bold("--csv - outputs the tokens as a tokens.csv file")}
+    ${chalk.dim("\tExample: halstead dir src --csv\n")}
+    ${chalk.bold("commands\n")}
     ${chalk.bold("dir")} - print metrics for the whole directory
     ${chalk.dim("\tExample: halstead dir src")}
     

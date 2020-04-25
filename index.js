@@ -17,13 +17,13 @@ module.exports = () => {
   
   switch (cmd) {
     case "dir":
-      require("./cmds/dir")(args._.slice(1));
+      require("./cmds/dir")(args);
       break;
     case "file":
-      require("./cmds/file")(args._.slice(1));
+      require("./cmds/file")(args);
       break;
     case "version":
-      require("./cmds/version")(args);
+      require("./cmds/version")();
       break;
     case "help":
       require("./cmds/help")(args);
@@ -33,20 +33,3 @@ module.exports = () => {
       break;
   }
 }
-
-// const getFiles = require('./utils/getFiles');
-// const readFile = require('./utils/readFile');
-// const combineSource = require('./utils/combineSrc');
-// const halstead = require('./utils/halstead');
-
-// const main = async () => {
-//   // const files = await getFiles('./utils');
-//   // console.log(files);
-//   // const file = await readFile(files[0], './utils');
-//   // console.log(file);
-//   // const all = await combineSource('./utils');
-//   // console.log(all);
-//   await halstead('./code');
-// }
-
-// main();
