@@ -1,4 +1,6 @@
 const sb = require('./stringBuilder');
+const fs = require('fs');
+const convertToCsv = require('./tokenMapToCsv');
 
 module.exports = (metrics) => {
   const {
@@ -6,7 +8,11 @@ module.exports = (metrics) => {
     totalOperators,
     distinctOperands,
     distinctOperators,
+    tokenTable
   } = metrics;
+
+  console.table(tokenTable);
+  fs.promises.writeFile(`${process.cwd()}${'/tokens.csv'}`, convertToCsv(tokenTable));
 
   console.log(sb('Total operators', totalOperators, false));
   console.log(sb('Distinct operators', distinctOperators, false));
