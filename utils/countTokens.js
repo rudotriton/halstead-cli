@@ -10,7 +10,6 @@ module.exports = (tokens) => {
         : acc.set(token, 1), new Map());
 
   tokens.forEach(({ type, value }) => {
-    // console.log('type: ', chalk.green(type.padEnd(10, ' ')), ' - value: ', chalk.blue(value));
     switch (type) {
       case 'Numeric':
       case 'Identifier':
