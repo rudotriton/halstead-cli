@@ -1,6 +1,6 @@
-const { exit } = require('node:process');
+import { exit } from 'node:process';
 
-module.exports = (message, toExit) => {
+export default (message, toExit) => {
   console.error(message);
   toExit && exit(1);
 };

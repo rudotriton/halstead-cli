@@ -1,8 +1,11 @@
-const minimist = require('minimist');
-const error = require('./utils/error');
-const chalk = require('chalk');
+import minimist from 'minimist';
+import error from './utils/error.js';
+import chalk from 'chalk';
+import main from "./cmds/main.js";
+import help from "./cmds/help.js";
+import version from "./cmds/version.js";
 
-module.exports = () => {
+function program() {
   const args = minimist(process.argv.slice(2));
   
   let cmd = args._[0] || 'help';
@@ -17,19 +20,22 @@ module.exports = () => {
   
   switch (cmd) {
     case "dir":
-      require("./cmds/main")(args, true);
+        main(args, true);
       break;
     case "file":
-      require("./cmds/main")(args);
+      main(args);
       break;
     case "version":
-      require("./cmds/version")();
+      version();
       break;
     case "help":
-      require("./cmds/help")(args);
+      help(args);
       break;
     default:
       error(chalk.red(`"${cmd}" is not a valid command!`), true);
       break;
   }
 }
+
+program();
+// export default program;

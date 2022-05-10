@@ -1,7 +1,7 @@
-const getFiles = require("./getFiles");
-const readFile = require("./readFile");
+import getFiles from "./getFiles.js";
+import readFile from "./readFile.js";
 
-module.exports = async (sourceDir) => {
+export default async (sourceDir) => {
   try {
     const files = await getFiles(sourceDir);
     let script = [];

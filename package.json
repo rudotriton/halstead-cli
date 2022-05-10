@@ -1,6 +1,6 @@
 {
   "name": "halstead-metrics-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A cli app to calculate the halstead metrics",
   "keywords": [
     "halstead",
@@ -14,12 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/rudotriton/halstead-cli.git"
   },
+  "type": "module",
   "engines": {
     "node": ">=10"
   },
   "scripts": {},
   "bin": {
-    "halstead": "bin/halstead"
+    "halstead": "bin/halstead.js"
   },
   "preferGlobal": true,
   "author": "",

@@ -1,13 +1,13 @@
-const chalk = require("chalk");
-const combineSrc = require("../utils/combineSrc");
-const countTokens = require("../utils/countTokens");
-const error = require("../utils/error");
-const ora = require("ora");
-const printMetrics = require("../utils/printMetrics");
-const recast = require("recast");
-const readFile = require("../utils/readFile");
+import chalk from "chalk";
+import combineSrc from "../utils/combineSrc.js";
+import countTokens from "../utils/countTokens.js";
+import error from "../utils/error.js";
+import ora from "ora";
+import printMetrics from "../utils/printMetrics.js";
+import recast from "recast";
+import readFile from "../utils/readFile.js";
 
-module.exports = async (allArgs, isDir) => {
+export default async (allArgs, isDir) => {
   const spinner = ora().start();
 
   const args = allArgs._.slice(1);
@@ -41,7 +41,9 @@ module.exports = async (allArgs, isDir) => {
       const parsedCode = recast.parse(fullCode);
       const metrics = countTokens(parsedCode.tokens);
       console.log(
-        `${chalk.green(`\nHalstead metrics for: \n\t${sources.join(",\n\t")}\n`)}`
+        `${chalk.green(
+          `\nHalstead metrics for: \n\t${sources.join(",\n\t")}\n`
+        )}`
       );
       printMetrics(metrics, { writeTSV, printTokens });
       console.log("\n");

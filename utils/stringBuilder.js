@@ -1,6 +1,6 @@
-const chalk = require('chalk');
+import chalk from "chalk";
 
-module.exports = (metric, value, toDec = true) => {
+export default (metric, value, toDec = true) => {
   let num = value;
   if (toDec) {
     num = num.toFixed(2);

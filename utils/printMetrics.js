@@ -1,8 +1,8 @@
-const sb = require('./stringBuilder');
-const fs = require('fs');
-const convertToTsv = require('./tokenMapToTsv');
+import sb from './stringBuilder.js';
+import fs from 'fs';
+import convertToTsv from './tokenMapToTsv.js';
 
-module.exports = (metrics, { writeTSV = false , printTokens = false }) => {
+export default (metrics, { writeTSV = false , printTokens = false }) => {
   const {
     totalOperands,
     totalOperators,

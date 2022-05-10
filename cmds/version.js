@@ -1,5 +1,5 @@
-const { version } = require('../package.json');
+import pack from "../package.json" assert { type: "json" };
 
-module.exports = () => {
-  console.log(`v${version}`);
+export default () => {
+  console.log(`v${pack.version}`);
 };

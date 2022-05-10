@@ -1,4 +1,4 @@
-module.exports = (tokens) => {
+export default (tokens) => {
   const operators = [];
   const operands = [];
 
