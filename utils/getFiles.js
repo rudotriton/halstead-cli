@@ -1,9 +1,14 @@
-const fs = require('fs');
-const promisify = require('util').promisify;
+const fs = require("fs");
+const promisify = require("util").promisify;
+const error = require("./error");
 
 const readdirAsync = promisify(fs.readdir);
 
 module.exports = async (sourceDir) => {
-  const files = await readdirAsync(sourceDir);
-  return files;
-}
+  try {
+    const files = await readdirAsync(sourceDir);
+    return files;
+  } catch (err) {
+    error(err);
+  }
+};

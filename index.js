@@ -17,10 +17,10 @@ module.exports = () => {
   
   switch (cmd) {
     case "dir":
-      require("./cmds/dir")(args);
+      require("./cmds/main")(args, true);
       break;
     case "file":
-      require("./cmds/file")(args);
+      require("./cmds/main")(args);
       break;
     case "version":
       require("./cmds/version")();

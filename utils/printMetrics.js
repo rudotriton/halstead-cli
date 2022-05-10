@@ -1,8 +1,8 @@
 const sb = require('./stringBuilder');
 const fs = require('fs');
-const convertToCsv = require('./tokenMapToCsv');
+const convertToTsv = require('./tokenMapToTsv');
 
-module.exports = (metrics, printCSV) => {
+module.exports = (metrics, { writeTSV = false , printTokens = false }) => {
   const {
     totalOperands,
     totalOperators,
@@ -11,10 +11,13 @@ module.exports = (metrics, printCSV) => {
     tokenTable
   } = metrics;
 
-  console.table(tokenTable);
-  
-  if (printCSV) {
-    fs.promises.writeFile(`${process.cwd()}${'/tokens.csv'}`, convertToCsv(tokenTable));
+  const sortedTable = [...tokenTable].sort((a,b) => b[1] - a[1]);
+  if (printTokens) {
+    console.table(sortedTable)
+  }
+
+  if (writeTSV) {
+    fs.promises.writeFile(`${process.cwd()}${'/tokens.tsv'}`, convertToTsv(sortedTable));
   }
 
   console.log(sb('Total operators', totalOperators, false));

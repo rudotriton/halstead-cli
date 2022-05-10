@@ -4,16 +4,19 @@ const menus = {
   main: `
     ${chalk.bold("halstead metrics cli\n\n")}
     ${chalk.bold("options\n")}
-    ${chalk.bold("--csv - outputs the tokens as a tokens.csv file")}
-    ${chalk.dim("\tExample: halstead dir src --csv\n")}
+    ${chalk.bold("--print-tokens - prints all the tokens")}
+    ${chalk.dim("\tExample: halstead dir src/ --print-tokens\n")}
+    ${chalk.bold("--tsv - writes the tokens as a tokens.tsv file")}
+    ${chalk.dim("\tExample: halstead dir src/ --tsv\n")}
     ${chalk.bold("commands\n")}
-    ${chalk.bold("dir")} - print metrics for the whole directory
-    ${chalk.dim("\tExample: halstead dir src")}
+    ${chalk.bold("dir")} - print metrics for all specified directories
+    ${chalk.dim("\tExample: halstead dir src/")}
+    ${chalk.dim("\tExample: halstead dir src/ utils/")}
     
     ${chalk.bold("file")} - print metrics for all specified files\n
     ${chalk.dim("\tExample: halstead file src/index.js")}
     ${chalk.dim("\tExample: halstead file src/index.js src/file.js\n")}
-    ${chalk.dim("For further information run: ")}
+    ${chalk.dim("For further information run:")}
     ${chalk.bold("\thalstead help [command]")}
   `,
 

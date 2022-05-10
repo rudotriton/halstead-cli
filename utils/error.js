@@ -1,4 +1,6 @@
-module.exports = (message, exit) => {
+const { exit } = require('node:process');
+
+module.exports = (message, toExit) => {
   console.error(message);
-  exit && process.exit(1);
+  toExit && exit(1);
 };

@@ -1,6 +1,6 @@
 {
   "name": "halstead-metrics-cli",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A cli app to calculate the halstead metrics",
   "keywords": [
     "halstead",
@@ -25,9 +25,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^3.0.0",
-    "minimist": "^1.2.0",
-    "ora": "^4.0.3",
-    "recast": "^0.18.5"
+    "chalk": "^5.0.1",
+    "minimist": "^1.2.6",
+    "ora": "^6.1.0",
+    "recast": "^0.21.1"
   }
 }
